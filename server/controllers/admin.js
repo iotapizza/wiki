@@ -34,7 +34,7 @@ router.post('/profile', (req, res) => {
   }
 
   return db.User.findById(req.user.id).then((usr) => {
-    usr.name = _.trim(req.body.name)
+    //usr.name = _.trim(req.body.name)
     if (usr.provider === 'local' && req.body.password !== '********') {
       let nPwd = _.trim(req.body.password)
       if (nPwd.length < 6) {

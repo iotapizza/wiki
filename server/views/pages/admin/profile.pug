@@ -26,7 +26,7 @@ block adminContent
             section
               label.label= t('admin:profile.displayname')
               p.control.is-fullwidth
-                input.input(type='text', placeholder=t('admin:profile.displaynameexample'), v-model='name')
+                input.input(type='text', placeholder=t('admin:profile.displaynameexample'), v-model='name', disabled)
             //-section
               label.label #{t('admin:profile.tfa')}: #[strong.is-red(v-cloak) {{ tfaStatus }}] 
               button.button.is-blue(@click='$store.dispatch("modalProfile2fa/open")', :disabled='tfaIsActive')
@@ -35,10 +35,11 @@ block adminContent
               button.button.is-blue(@click='saveUser', :disabled='!tfaIsActive')
                 i.nc-icon-outline.ui-1_circle-delete
                 span= t('admin:profile.tfadisable')
-            section
-              button.button.is-green(@click='saveUser')
-                i.nc-icon-outline.ui-1_check
-                span= t('admin:profile.savechanges')
+            if(user.provider !== 'slack')
+              section
+                button.button.is-green(@click='saveUser')
+                  i.nc-icon-outline.ui-1_check
+                  span= t('admin:profile.savechanges')
       .column
         .panel-aside
           label.label= t('admin:profile.provider')
