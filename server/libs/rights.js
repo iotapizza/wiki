@@ -91,6 +91,8 @@ module.exports = {
   checkRole (p, rt, role) {
     if (_.find(rt, { role: 'admin' })) { return true }
 
+    p = p.replace(/^(\/create|\/edit)/, '')
+
     // Check specific role on path
 
     let filteredRights = _.filter(rt, (r) => {
