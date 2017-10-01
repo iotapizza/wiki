@@ -214,7 +214,7 @@ module.exports = {
       return self._git.add(gitFilePath)
     }).then(() => {
       let commitUsr = securityHelper.sanitizeCommitUser(author)
-      return self._git.exec('commit', ['-m', commitMsg.replace(/&#x2F;/, '/'), '--author="' + commitUsr.name + ' <' + commitUsr.email + '>"']).catch((err) => {
+      return self._git.exec('commit', ['-m', commitMsg, '--author="' + commitUsr.name + ' <' + commitUsr.email + '>"']).catch((err) => {
         if (_.includes(err.stdout, 'nothing to commit')) { return true }
       })
     })
@@ -256,7 +256,7 @@ module.exports = {
     msg = msg || 'Uploads repository sync'
 
     return self._git.add('uploads').then(() => {
-      return self._git.commit(msg.replace(/&#x2F;/, '/')).catch((err) => {
+      return self._git.commit(msg).catch((err) => {
         if (_.includes(err.stdout, 'nothing to commit')) { return true }
       })
     })
