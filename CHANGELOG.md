@@ -2,6 +2,18 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [v1.0.11] - 2017-10-14
+### Added
+- **Localization**: Japanese locale is now available (thanks to @johnnyshields)
+- **Misc**: Added referrer policy header
+
+## Fixed
+- **Authentication**: Fix for name search when using OpenLDAP
+
+## [v1.0.10] - 2017-10-09
+### Added
+- **Misc**: Ability to delete pages from the UI
+
 ## [v1.0.9] - 2017-09-14
 ### Added
 - **Localization**: Persian (farsi) locale is now available (thanks to @ashkang)
@@ -225,6 +237,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Updated dependencies + snyk policy
 
+[v1.0.10]: https://github.com/Requarks/wiki/releases/tag/v1.0.10
 [v1.0.9]: https://github.com/Requarks/wiki/releases/tag/v1.0.9
 [v1.0.8]: https://github.com/Requarks/wiki/releases/tag/v1.0.8
 [v1.0.7]: https://github.com/Requarks/wiki/releases/tag/v1.0.7
