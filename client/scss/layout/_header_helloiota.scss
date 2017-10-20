@@ -1,0 +1,38 @@
+#helloiota {
+	background-color: rgb(85, 85, 85);
+	font-family: Arial;
+	font-size: 14pt;
+	font-weight: normal;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 45px;
+	z-index: 999;
+}
+
+#helloiota li {
+	float: left;
+}
+
+#helloiota a {
+	height: 45px;
+	line-height: 45px;
+	padding: 0 5px 0 20px;
+	color: #ddd;
+	font-size: 12pt;
+}
+
+#helloiota a:hover {
+	text-decoration: none;
+	color: #F17C12;
+}
+
+#helloiota li:first-child a {
+	letter-spacing: 1px;
+	font-size: 14pt;
+}
+
+#helloiota li:first-child a:hover {
+	color: #31B5F4;
+}
